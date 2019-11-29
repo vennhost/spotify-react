@@ -28,7 +28,7 @@ class SongList extends React.Component {
         console.log(response)
         let json = response.json();
         
-        let songs = json.data;
+        let songs = await json.data;
 
         console.log(songs)
 
