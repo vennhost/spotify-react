@@ -1,4 +1,6 @@
 import React from 'react';
+import {Row, Col, Card, CardText, CardImg, CardBody, CardTitle, CardSubtitle} from 'reactstrap'
+
 
 
 
@@ -9,9 +11,21 @@ class SongList extends React.Component {
     render() { 
         return ( 
             <div>
-                {(this.state.songs).map((song, index) => 
-                    <div key={index}>{song.title}</div>
+                <Row>
+                {(this.state.songs).map((song, y) => 
+                    
+                    <Col md="4">
+                    <Card className="song m-2" key={y}>
+                            <CardImg top src={ song.album.cover } alt="Song Image" />
+                            <CardBody>
+                            <CardTitle>{ song.title }</CardTitle>
+                            
+                            <CardText>{ song.id }</CardText>
+                            </CardBody>
+                        </Card> 
+                        </Col>                    
                     )}
+                </Row>
             </div>
          );
     }
@@ -26,7 +40,7 @@ class SongList extends React.Component {
             method: "GET"
         })
         console.log(response)
-        let json = response.json();
+        let json = await response.json();
         
         let songs = await json.data;
 
