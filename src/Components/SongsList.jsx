@@ -14,7 +14,7 @@ class SongList extends React.Component {
                 <Row>
                 {(this.state.songs).map((song, y) => 
                     
-                    <Col md="4">
+                    <Col md="2">
                     <Card className="song m-2" key={y}>
                             <CardImg top src={ song.album.cover } alt="Song Image" />
                             <CardBody>

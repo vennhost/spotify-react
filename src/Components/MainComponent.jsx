@@ -12,11 +12,9 @@ class MainComponent extends React.Component {
             <Container>
                 <div>
                     <h1>My Spotify</h1>
-                    <Row>
-                        <Col md="4">
+                    
                         <SongList />
-                        </Col>
-                    </Row>
+                        
                     
                 </div>
             </Container>
