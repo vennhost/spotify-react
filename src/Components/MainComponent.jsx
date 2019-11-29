@@ -1,14 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
-import {BrowserRouter, Route} from 'react-router-dom'
+import SongList from './SongsList'
+
+
 
 class MainComponent extends React.Component {
     state = {  }
     render() { 
         return ( 
             <div>
-
+                <h1>My Spotify</h1>
+                <SongList />
             </div>
          );
     }
