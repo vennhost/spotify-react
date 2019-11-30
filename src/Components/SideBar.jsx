@@ -14,13 +14,13 @@ class SideBar extends React.Component {
             
             
                         
-                    <div className="container logo-wrapper">
+                    <div className="container logo-wrapper" pd="10">
                             <img src={Logo}  className="logo ml-3 mt-3" alt="Logo"/> 
                     </div>
 
                 <div className="container vertical-menu pt-3">
                     <nav className="nav flex-column">
-                        <a className="nav-link active text-white" href="#"><i className="material-icons mr-1">home</i><span className="ml-1">Home</span></a>
+                        <a className="nav-link active text-white" href="#"><i className="material-icons mr-1">home</i><span className="ml-1">Home<MaterialIcon icon="alarm_on" /></span></a>
                         <a className="nav-link text-white" href="#"><i className="material-icons mr-1">search</i><span className="ml-1">Search</span></a>
                         <a className="nav-link text-white" href="#"><i className="material-icons mr-1">local_library</i><span className="ml-1">Your Library</span></a>
                     </nav>

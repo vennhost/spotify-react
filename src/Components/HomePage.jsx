@@ -3,13 +3,14 @@ import SongList from './SongsList';
 import {Row, Col, Container} from 'reactstrap';
 import SideBar from './SideBar';
 import {Logo} from './logo.png'
+import '../index.css'
 
 class HomePage extends React.Component {
     state = {  }
     render() { 
         return ( 
             <>
-            <Row>
+            <Row className="home-wrapper">
 
             <Col md="2">
                 <SideBar />

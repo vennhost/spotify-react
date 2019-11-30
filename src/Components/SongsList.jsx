@@ -1,5 +1,6 @@
 import React from 'react';
-import {Row, Col, Card, CardText, CardImg, CardBody, CardTitle, CardSubtitle, Spinner, Container} from 'reactstrap'
+import {Row, Col, Card, CardText, CardImg, CardBody, CardTitle, CardSubtitle, Spinner, Container} from 'reactstrap';
+import '../index.css'
 
 
 
