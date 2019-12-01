@@ -1,6 +1,7 @@
 import React from 'react';
 import {Row, Col, Card, CardText, CardImg, CardBody, CardTitle, CardSubtitle, Spinner, Container} from 'reactstrap';
-import '../index.css'
+import '../index.css';
+import {Link} from 'react-router-dom'
 
 
 
@@ -27,12 +28,15 @@ class SongList extends React.Component {
                         
                         <Col md="2">
                         <Card className="song m-2" key={y}>
+                        <Link to={"/albumdetails/" + song.album.id}>
                                 <CardImg top src={ song.album.cover } alt="Song Image" />
                                 <CardBody>
                                 <CardTitle>{ song.title }</CardTitle>
                                 
                                 <CardText>{ song.id }</CardText>
+                                
                                 </CardBody>
+                                </Link>
                             </Card> 
                             </Col>                    
                         )}

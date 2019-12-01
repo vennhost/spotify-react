@@ -4,7 +4,9 @@ import NavBar from './NavBar';
 import '../index.css'
 import {Container, Row, Col} from 'reactstrap';
 import {BrowserRouter as Router, Route} from 'react-router-dom'
-import HomePage from '../Components/HomePage'
+import HomePage from '../Components/HomePage';
+import Footer from './Footer';
+import AlbumDetails from './Album'
 
 
 
@@ -17,10 +19,12 @@ class MainComponent extends React.Component {
                 <div>
                     
                     
-                     <Route path="/" exact component={HomePage} />   
+                     <Route path="/" exact component={HomePage} />  
+                     <Route path="/albumdetails/:albumId" component={AlbumDetails} />
                         
                     
                 </div>
+                <Footer />
             </Router>
          );
     }
