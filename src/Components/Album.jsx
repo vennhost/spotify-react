@@ -1,19 +1,20 @@
 import React from "react";
 import { Container, Col, Row } from "reactstrap";
 
-import items from "./SongsList";
+
 
 
 class AlbumDetails extends React.Component {
   state = { 
-    albumId: undefined,
+    id: undefined,
     song: undefined
+    
    }
   render() { 
 
-    const albumId = props.match.params.albumId;
+    /* const albumId = props.match.params.albumId;
 
-    const song = items.find(item => item.id.toString() === albumId);
+    const song = items.find(item => item.id.toString() === albumId); */
 
     
       if (song) {
@@ -50,6 +51,8 @@ class AlbumDetails extends React.Component {
   }
 
   componentDidMount = async () => {
+
+    const {id} = await this.props.match.params;
     let response = await fetch("https://deezerdevs-deezer.p.rapidapi.com/album/{id}", 
     {
         headers: {
@@ -61,13 +64,14 @@ class AlbumDetails extends React.Component {
 console.log(response)
 let json = await response.json();
 
-let song = await json.data;
+let song = await json.data.album;
 
 console.log(song)
 
 this.setState({
-    albumId: song.id,
+    id: song.id,
     song: song
+    
 })
 
 }
